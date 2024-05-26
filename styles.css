@@ -143,11 +143,12 @@ h1 {
 }
 
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   text-align: center;
-  margin-top: 10px;
-  padding: 10px;
   background-color: #f4f4f4;
-  border-top: 1px solid #ddd;
 }
 
 .footer a {
@@ -270,4 +271,19 @@ h1 {
 
 #edit-product-modal button:hover {
   background-color: #218838; /* Darker green on hover */
+}
+
+/* Modal Styling */
+.modal-content {
+  text-align: center;
+}
+
+.member {
+  display: flex;
+  align-items: baseline; /* Căn giữa theo chiều dọc */
+}
+
+.code {
+  margin-left: 100px;
+  margin-right: 100px; /* Khoảng cách giữa code và name */
 }

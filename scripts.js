@@ -196,3 +196,37 @@ function deleteProduct(productId) {
   renderProducts();
 }
 
+/*------------------------------------------------------------------------------- */
+// Hàm mở modal "Powered by"
+function openPoweredByModal() {
+  const modal = document.getElementById("powered-by-modal");
+  modal.style.display = "flex";
+}
+
+// Hàm đóng modal "Powered by"
+function closePoweredByModal() {
+  const modal = document.getElementById("powered-by-modal");
+  modal.style.display = "none";
+}
+
+// Đảm bảo các hàm openEditPopup và closeEditPopup cũng được định nghĩa
+function openEditPopup() {
+  const modal = document.getElementById("edit-popup-modal");
+  modal.style.display = "flex";
+}
+
+function closeEditPopup() {
+  const modal = document.getElementById("edit-popup-modal");
+  modal.style.display = "none";
+}
+
+function closeModal() {
+  const modal = document.getElementById("description-modal");
+  modal.style.display = "none";
+}
+
+function closeEditProductModal() {
+  const modal = document.getElementById("edit-product-modal");
+  modal.style.display = "none";
+}
+
