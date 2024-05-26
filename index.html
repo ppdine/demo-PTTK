@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh Mục Sản Phẩm</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Danh Mục Sản Phẩm</h1>
+      <div class="product-grid" id="product-grid">
+        <!-- Sản phẩm sẽ được tạo động tại đây -->
+      </div>
+      <div class="action-bar">
+        <button class="action-button" onclick="openEditPopup()">Edit</button>
+      </div>
+    </div>
+
+    <!-- Modal Chỉnh Sửa -->
+    <div id="edit-popup-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeEditPopup()">&times;</span>
+        <div id="edit-actions">
+          <button class="action-button" onclick="toggleAddProductForm()">
+            Thêm Sản Phẩm <i class="fas fa-plus"></i>
+          </button>
+          <button class="action-button" onclick="toggleEditDeleteMode()">
+            Chỉnh Sửa/Xóa Sản Phẩm <i class="fas fa-edit"></i>
+          </button>
+        </div>
+        <div
+          id="add-product-form-container"
+          class="form-container"
+          style="display: none"
+        >
+          <h2>Thêm Sản Phẩm</h2>
+          <form id="add-product-form">
+            <label for="product-name">Tên Sản Phẩm:</label>
+            <input type="text" id="product-name" required />
+            <label for="product-price">Giá:</label>
+            <input type="text" id="product-price" required />
+            <label for="product-description">Mô Tả:</label>
+            <textarea id="product-description" required></textarea>
+            <label for="product-image">Đường Dẫn Ảnh:</label>
+            <input type="text" id="product-image" required />
+            <button type="submit">Thêm</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Mô Tả Sản Phẩm -->
+    <div id="description-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <button id="buy-button" onclick="alert('Mua thành công!')">Mua</button>
+      </div>
+    </div>
+
+    <!-- Modal Chỉnh Sửa Sản Phẩm -->
+    <div id="edit-product-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeEditProductModal()"
+          >&times;</span
+        >
+        <h2>Chỉnh Sửa Sản Phẩm</h2>
+        <form id="edit-product-form">
+          <input type="hidden" id="edit-product-id" />
+          <label for="edit-product-name">Tên Sản Phẩm:</label>
+          <input type="text" id="edit-product-name" required />
+          <label for="edit-product-price">Giá:</label>
+          <input type="text" id="edit-product-price" required />
+          <label for="edit-product-description">Mô Tả:</label>
+          <textarea id="edit-product-description" required></textarea>
+          <label for="edit-product-image">Đường Dẫn Ảnh:</label>
+          <input type="text" id="edit-product-image" required />
+          <button type="submit">Cập Nhật</button>
+        </form>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>

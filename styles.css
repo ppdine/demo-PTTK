@@ -1,0 +1,273 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.action-bar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.action-button {
+  display: inline-block;
+  margin: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.action-button:hover {
+  background-color: #218838;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-item h2 {
+  font-size: 1.2em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.product-item p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product-item button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.product-item button:hover {
+  background-color: #0056b3;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#buy-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+#buy-button:hover {
+  background-color: #218838;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-top: 1px solid #ddd;
+}
+
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.form-container h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-container label {
+  display: block;
+  font-size: 1em;
+  color: #333;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.form-container input,
+.form-container textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.form-container button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+.form-container button:hover {
+  background-color: #218838;
+}
+
+/* Style for edit button container */
+.edit-button-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.edit-button-container .action-button {
+  margin-top: 20px;
+}
+
+/* Modal Styling for Edit Product */
+#edit-product-modal .modal-content {
+  background-color: #fff; /* Match the form's background */
+  padding: 20px;
+  border: 1px solid #ddd; /* Use the same border as the form */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  text-align: center; /* Align content to the center */
+  margin: 90px auto; /* Center the modal on the page */
+  max-width: 500px; /* Set a maximum width */
+  max-height: 430px; /* Set a maximum height */
+}
+
+#edit-product-modal h2 {
+  font-size: 1.5em; /* Larger heading size */
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#edit-product-modal label {
+  display: block;
+  font-size: 1em;
+  color: #333;
+  margin-top: 10px;
+  text-align: left; /* Align labels to the left */
+}
+
+#edit-product-modal input,
+#edit-product-modal textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#edit-product-modal button {
+  background-color: #28a745; /* Green button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+#edit-product-modal button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
